@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Firebase User Manager</title>
+</head>
+<body>
+  <h2>Add New User</h2>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <button type="submit">Add User</button>
+  </form>
+
+  <h2>Users</h2>
+  <table border="1" id="userTable"></table>
+
+  <div id="editSection" style="display:none;">
+    <h2>Edit User</h2>
+    <form id="editForm">
+      <input type="text" id="editName" required />
+      <input type="email" id="editEmail" required />
+      <button type="submit">Update User</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

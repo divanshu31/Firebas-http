@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Users</title>
+</head>
+<body>
+    <h1>Users List</h1>
+    <div id="userTable"></div>
+    <div id="error" class="error"></div>
+
+    <script>
+        const databaseURL = "";
+        
+        fetch(databaseURL)
+            .then(response => {
+                if(!response.ok) {
+                    throw new Error("Network response was not ok.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                if(!data){
+                    document.getElementById("userTable").innerText = "No users found.";
+                    return;
+                }
+                let table = `<table>
+                    `
+            })
+    </script>
+</body>
+</html>
