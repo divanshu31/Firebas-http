@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>List of Novels</h1>
+    <div>
+        <input type="text" id="searchIput" placeholder="Search by title or author">
+        <input type="Number" id="minYear" placeholder="From Year">
+        <input type="Number" id="maxYear" placeholder="To Year">
+
+        <select id="sortSelect">
+            <option value="">Sort By Price</option>
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
+        </select>
+        <button onclick="applyFilters()">Apply</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Year</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody id="novelTable"></tbody>
+    </table>
+
+
+    <script src="script.js">
+        const firebaseConfig = {
+            apiKey: "",
+            authDomain: "",
+            dataBaseURl: "",
+            projectId: "",
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        async function applyFilters() {
+            
+        }
+    </script>
+</body>
+</html>
